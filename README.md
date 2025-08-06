@@ -1,5 +1,5 @@
 # Discrete-Trajectory-Autoencoder
-A discrete trajectory autoencoder based on the BART model
+A discrete trajectory autoencoder based on language modeling
 
 ## Description
 
