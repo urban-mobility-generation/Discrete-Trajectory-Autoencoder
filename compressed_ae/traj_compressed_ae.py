@@ -299,7 +299,7 @@ class PerceiverResampler(nn.Module):
         self.use_coords = use_coords
         if self.use_coords:
             self.coord_mlp = nn.Sequential(
-                nn.Linear(2, dim),  # 从 (lat, lon) → embedding
+                nn.Linear(2, dim),  # from (lat, lon) → embedding
                 nn.ReLU(),
                 nn.Linear(dim, dim)
             )
