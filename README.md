@@ -22,7 +22,19 @@ cd Discrete-Trajectory-Autoencoder
 
 ### 2. Prepare the dataset
 Make sure you have prepared the trajectory dataset.  
-We will provide a preprocessed public dataset from Porto soon!
+We will provide a preprocessed public dataset from Porto soon! 
+
+> 📁 Dataset Overview
+[Processed Porto Dataset](https://drive.google.com/file/d/1_wLsNJ2y3LXGU3BobOVogBzMImL71its/view?usp=drive_link)
+
+The folder contains:
+
+- `all_traj_results.npy`: Normalized trajectory data  
+- `all_attr_results.npy`: Normalized attributes for each trajectory (e.g., departure time, distance, origin/destination grid)  
+- `edge_map_feature_po.csv`: Road network information  
+- `final_segments_all_train_data.pkl`: Segment-level trajectories  
+
+Please follow the usage requirements set by the original owners of [this open-source dataset](https://www.kaggle.com/c/pkdd-15-predict-taxi-service-trajectory-i)!
 
 ## Training
 
