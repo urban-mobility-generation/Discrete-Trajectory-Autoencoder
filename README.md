@@ -8,7 +8,7 @@ This repository contains the training scripts for the discrete trajectory autoen
 ![framework](assets/ae.png)
 
 In this repository:
-- Inspired by language modeling for discrete data, we treat urban mobility trajectory data as a form of language and perform language modeling.
+- Inspired by language modeling for discrete data, we treat urban mobility trajectory data as a form of language (discrete sequences).
 - We first pretrain a basic discrete, road-segment-level trajectory autoencoder based on a BART structure.
 - After pretraining, we perform autoencoder compression to obtain denser embeddings of trajectory data.
  

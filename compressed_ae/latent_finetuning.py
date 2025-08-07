@@ -244,7 +244,7 @@ class Trainer(object):
 
         # ==========  dataset and dataloader ==========
         # obtain centroid latitude and longitude of segments
-        segment_df = pd.read_csv("/storage/baoshen/public_dataset/final_didi_train_segment_generation/edge_map_feature_chengdu.csv")
+        segment_df = pd.read_csv("./public_dataset/final_didi_train_segment_generation/edge_map_feature_chengdu.csv")
         lat_min, lat_max = segment_df["lat"].min(), segment_df["lat"].max()
         lon_min, lon_max = segment_df["lon"].min(), segment_df["lon"].max()
         segment_df["norm_lat"] = 2 * (segment_df["lat"] - lat_min) / (lat_max - lat_min) - 1
@@ -253,12 +253,12 @@ class Trainer(object):
             int(row.edge_id): (row.norm_lat, row.norm_lon) for _, row in segment_df.iterrows()
         }
 
-        file_path = "/storage/baoshen/public_dataset/final_didi_train_segment_generation/train_data/final_segments_all_train_data.pkl"
+        file_path = "./public_dataset/final_didi_train_segment_generation/train_data/final_segments_all_train_data.pkl"
         trajs = pd.read_pickle(file_path)
         all_sequences = trajs['unique_id_seq'].apply(parse_sequence).tolist()
         max_seq_length = 128
 
-        vocab_file = "/storage/baoshen/cardiff/cardiff_lm/pretrain_lm/bart_vocab.txt"
+        vocab_file = "../pretrain_ae/bart_vocab.txt"
         self.tokenizer = BertTokenizerFast(vocab_file=vocab_file, do_lower_case=False)
         self.tokenizer.add_special_tokens({
             "bos_token": "<s>",

@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 # ========== data loading ==========
-file_path = "/storage/baoshen/public_dataset/final_didi_train_segment_generation/train_data/final_segments_all_train_data.pkl"
+file_path = "./public_dataset/final_didi_train_segment_generation/train_data/final_segments_all_train_data.pkl"
 trajs = pd.read_pickle(file_path)
 
 def parse_sequence(seq):
